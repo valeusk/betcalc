@@ -1,4 +1,4 @@
-package com.example.calc;
+package com.example.bettcalc;
 
 import android.app.Activity;
 import android.os.Bundle;
