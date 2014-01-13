@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Bettcalc</string>
+    <string name="app_name">calc</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="profit">Профит</string>
+    <string name="winmoney">Выигрышь</string>
+    <string name="Stavka2">Ставка №2</string>
+    <string name="Stavka1">Ставка №1</string>
+    <string name="txtK1">КФ1</string>
+    <string name="txtK2">КФ2</string>
+    <string name="chet">Посчитать</string>
+    <string name="Procent">процент прибыли</string>
 
 </resources>
+
