@@ -107,8 +107,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	    	}
 	    else
 	    	{
-	    	tVprocent.setTextColor(getResources().getColor(R.color.Good));
-	    	tv4.setTextColor(getResources().getColor(R.color.Green));
+	    	tVprocent.setTextColor(getResources().getColor(R.color.Green));
+	    	tv4.setTextColor(getResources().getColor(R.color.Good));
 	    	}
 	    tvsum2.setText("СТ2 = " + Float.toString(round(sum2, 2)));
 	    tv4.setText(Float.toString(round((vk1*vs1 - allsum), 2)));//профит
