@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -12,6 +13,9 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity implements OnClickListener {
 	//поля
+	final int MENU_RESET_ID = 1;
+	final int MENU_QUIT_ID = 2;
+	
 	EditText editText1;
 	EditText editText2;
 	EditText editText3;
@@ -100,15 +104,41 @@ public class MainActivity extends Activity implements OnClickListener {
 	    tvsum2.setText("СТ2 = " + Float.toString(round(sum2, 2)));
 	    tv4.setText(Float.toString(round((vk1*vs1 - allsum), 2)));//профит
 	    tvres1.setText(" = " + Float.toString(round((vk1*vs1),2)));
-	    
 	    tVprocent.setText(Float.toString(round(procent,2)) + " %");
 	    
 	}
 	    @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	    	menu.add(0, MENU_RESET_ID, 0, "Reset");
+	    	menu.add(0, MENU_QUIT_ID, 0, "Quit");
+	    	return super.onCreateOptionsMenu(menu);
 	}
 
+	    @Override
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	    // TODO Auto-generated method stub
+	    switch (item.getItemId()) {
+	    case MENU_RESET_ID:
+	    // очищаем поля
+	    	
+	    	tvsum2.setText("");
+		    tv4.setText("");//профит
+		    tvres1.setText("");
+		    tVprocent.setText("");
+	    	
+		    editText1.setText("");
+			editText2.setText("");
+			editText3.setText("");
+	    	/*etNum1.setText("");
+	    etNum2.setText("");
+	    tvResult.setText("");*/
+	    break;
+	    case MENU_QUIT_ID:
+	    // выход из приложения
+	    finish();
+	    break;
+	    }
+	    return super.onOptionsItemSelected(item);
+	    }    
+	    
 }
