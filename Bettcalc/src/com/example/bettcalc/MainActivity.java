@@ -122,16 +122,13 @@ public class MainActivity extends Activity implements OnClickListener {
 	    // очищаем поля
 	    	
 	    	tvsum2.setText("");
-		    tv4.setText("");//профит
+		    tv4.setText("");
 		    tvres1.setText("");
 		    tVprocent.setText("");
-	    	
-		    editText1.setText("");
+	    	editText1.setText("");
 			editText2.setText("");
 			editText3.setText("");
-	    	/*etNum1.setText("");
-	    etNum2.setText("");
-	    tvResult.setText("");*/
+	    	
 	    break;
 	    case MENU_QUIT_ID:
 	    // выход из приложения
