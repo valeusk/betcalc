@@ -11,6 +11,9 @@
     <string name="txtK2">КФ2</string>
     <string name="chet">Посчитать</string>
     <string name="Procent">процент прибыли</string>
+    <color name="Attention">#FF1A00</color>
+    <color name="Good">#1A00FF</color>
+    <color name="Green">#00FF1A</color>
 
 </resources>
 
