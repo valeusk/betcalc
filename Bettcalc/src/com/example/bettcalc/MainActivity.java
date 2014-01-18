@@ -16,16 +16,16 @@ public class MainActivity extends Activity implements OnClickListener {
 	final int MENU_RESET_ID = 1;
 	final int MENU_QUIT_ID = 2;
 	
-	EditText editText1;
-	EditText editText2;
-	EditText editText3;
+	EditText etk2;
+	EditText etk1;
+	EditText etsum1;
 	//отображение
 	TextView tvres1;
 	TextView textView2;
 	TextView tvsum2;
-	TextView tv4;
+	TextView profit;
 	TextView tVprocent;
-	Button button1;
+	Button count;
 	
 	String oper = "";
 	
@@ -41,19 +41,19 @@ public class MainActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-	
-		editText1 = (EditText) findViewById(R.id.k2);
-		editText2 = (EditText) findViewById(R.id.k1);
-		editText3 = (EditText) findViewById(R.id.sum1);
+	    //Объявление
+		etk2 = (EditText) findViewById(R.id.etk2);
+        etk1 = (EditText) findViewById(R.id.etk1);
+		etsum1 = (EditText) findViewById(R.id.etsum1);
 		
-		tvres1 = (TextView) findViewById(R.id.res1);
-		tvsum2 = (TextView) findViewById(R.id.textView4);
-		tv4 = (TextView) findViewById(R.id.textView3);
-		tVprocent = (TextView) findViewById(R.id.textView1);
-		button1 = (Button) findViewById(R.id.button1);
+		//tvres1 = (TextView) findViewById(R.id.res1);
+		tvsum2 = (TextView) findViewById(R.id.tvsum2);
+		profit = (TextView) findViewById(R.id.tvProfit);
+		tVprocent = (TextView) findViewById(R.id.tvProc);
+		count = (Button) findViewById(R.id.btcount);
 		
 		// прописываем обработчик
-		button1.setOnClickListener(this);
+		count.setOnClickListener(this);
 	}
 
 	@Override
@@ -68,16 +68,16 @@ public class MainActivity extends Activity implements OnClickListener {
 	    float allsum = 0;
 	    
 	    // Проверяем поля на пустоту
-	    if (TextUtils.isEmpty(editText1.getText().toString())
-	        || TextUtils.isEmpty(editText2.getText().toString())||TextUtils.isEmpty(editText3.getText().toString())) {
+	    if (TextUtils.isEmpty(etk2.getText().toString())
+	        || TextUtils.isEmpty(etk1.getText().toString())||TextUtils.isEmpty(etsum1.getText().toString())) {
 	      return;}
 	 // читаем EditText и заполняем переменные числами
-	    vk2 = Float.parseFloat(editText1.getText().toString());
-	    vk1 = Float.parseFloat(editText2.getText().toString());
-	    vs1 = Float.parseFloat(editText3.getText().toString());
+	    vk2 = Float.parseFloat(etk2.getText().toString());
+	    vk1 = Float.parseFloat(etk1.getText().toString());
+	    vs1 = Float.parseFloat(etsum1.getText().toString());
 	    
 	    switch (v.getId()) {
-	    case R.id.button1:
+	    case R.id.btcount:
 	      oper = "=";
 	      sum2 = (vk1 * vs1)/vk2;
 	      break;
@@ -103,16 +103,16 @@ public class MainActivity extends Activity implements OnClickListener {
 	    if (procent < 0)
 	    	{
 	    	tVprocent.setTextColor(getResources().getColor(R.color.Attention));
-	    	tv4.setTextColor(getResources().getColor(R.color.Attention));
+	    	profit.setTextColor(getResources().getColor(R.color.Attention));
 	    	}
 	    else
 	    	{
 	    	tVprocent.setTextColor(getResources().getColor(R.color.Green));
-	    	tv4.setTextColor(getResources().getColor(R.color.Good));
+	    	profit.setTextColor(getResources().getColor(R.color.Good));
 	    	}
 	    tvsum2.setText("СТ2 = " + Float.toString(round(sum2, 2)));
-	    tv4.setText(Float.toString(round((vk1*vs1 - allsum), 2)));//профит
-	    tvres1.setText(" = " + Float.toString(round((vk1*vs1),2)));
+	    profit.setText(Float.toString(round((vk1*vs1 - allsum), 2)));//профит
+	    //tvres1.setText(" = " + Float.toString(round((vk1*vs1),2)));
 	    tVprocent.setText(Float.toString(round(procent,2)) + " %");
 	    
 	}
@@ -131,12 +131,12 @@ public class MainActivity extends Activity implements OnClickListener {
 	    // очищаем поля
 	    	
 	    	tvsum2.setText("");
-		    tv4.setText("");
+		    profit.setText("");
 		    tvres1.setText("");
 		    tVprocent.setText("");
-	    	editText1.setText("");
-			editText2.setText("");
-			editText3.setText("");
+	    	etk2.setText("");
+			etk1.setText("");
+			etsum1.setText("");
 	    	
 	    break;
 	    case MENU_QUIT_ID:

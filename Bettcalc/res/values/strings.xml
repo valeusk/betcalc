@@ -3,17 +3,23 @@
 
     <string name="app_name">Bettcalc</string>
     <string name="action_settings">Settings</string>
-    <string name="profit">Профит</string>
+    <string name="profit">-------------------</string>
     <string name="winmoney">Выигрышь</string>
     <string name="Stavka2">Ставка №2</string>
     <string name="Stavka1">Ставка №1</string>
     <string name="txtK1">КФ1</string>
     <string name="txtK2">КФ2</string>
     <string name="chet">Посчитать</string>
-    <string name="Procent">процент прибыли</string>
+    <string name="Procent">%</string>
     <color name="Attention">#FF1A00</color>
     <color name="Good">#1A00FF</color>
     <color name="Green">#00FF1A</color>
+    <string name="strProfit">Прибыль:</string>
+    <string name="strProcentprib">Процент прибыли:</string>
+    <string name="txtKf">Коэффициенты</string>
+    <string name="txtStavka">Ставка</string>
+    <string name="txK1">К1</string>
+    <string name="txK2">К2</string>
 
 </resources>
 
