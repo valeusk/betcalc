@@ -16,7 +16,7 @@
     <color name="Green">#00FF1A</color>
     <string name="strProfit">Прибыль:</string>
     <string name="strProcentprib">Процент прибыли:</string>
-    <string name="txtKf">Коэффициенты</string>
+    <string name="txtKf">КФ</string>
     <string name="txtStavka">Ставка</string>
     <string name="txK1">К1</string>
     <string name="txK2">К2</string>
