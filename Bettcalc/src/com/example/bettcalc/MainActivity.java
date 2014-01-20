@@ -15,11 +15,10 @@ public class MainActivity extends Activity implements OnClickListener {
 	
 	final int MENU_RESET_ID = 1;
 	final int MENU_QUIT_ID = 2;
-	//поля
+	
 	EditText etk2;
 	EditText etk1;
 	EditText etsum1;
-	//отображение
 	TextView tvres1;
 	TextView textView2;
 	TextView tvsum2;
@@ -38,23 +37,24 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 	
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-	    //Объявление
-		etk2 = (EditText) findViewById(R.id.etk2);
-        etk1 = (EditText) findViewById(R.id.etk1);
-		etsum1 = (EditText) findViewById(R.id.etsum1);
-		
-		//tvres1 = (TextView) findViewById(R.id.res1);
-		tvsum2 = (TextView) findViewById(R.id.tvsum2);
-		profit = (TextView) findViewById(R.id.tvProfit);
-		tVprocent = (TextView) findViewById(R.id.tvProc);
-		count = (Button) findViewById(R.id.btcount);
-		
-		// прописываем обработчик
-		count.setOnClickListener(this);
-	}
+	protected void onCreate(Bundle savedInstanceState) 
+			{
+				super.onCreate(savedInstanceState);
+				setContentView(R.layout.activity_main);
+			    //Объявление
+				etk2 = (EditText) findViewById(R.id.etk2);
+		        etk1 = (EditText) findViewById(R.id.etk1);
+				etsum1 = (EditText) findViewById(R.id.etsum1);
+				
+				//tvres1 = (TextView) findViewById(R.id.res1);
+				tvsum2 = (TextView) findViewById(R.id.tvsum2);
+				profit = (TextView) findViewById(R.id.tvProfit);
+				tVprocent = (TextView) findViewById(R.id.tvProc);
+				count = (Button) findViewById(R.id.btcount);
+				
+				// прописываем обработчик
+				count.setOnClickListener(this);
+			}
 
 	@Override
 	  public void onClick(View v) {
@@ -111,39 +111,38 @@ public class MainActivity extends Activity implements OnClickListener {
 	    	profit.setTextColor(getResources().getColor(R.color.Green));
 	    	}
 	    tvsum2.setText("СТ2 = " + Float.toString(round(sum2, 2)));
-	    profit.setText(Float.toString(round((vk1*vs1 - allsum), 2)));//профит
-	    //tvres1.setText(" = " + Float.toString(round((vk1*vs1),2)));
+	    profit.setText(Float.toString(round((vk1*vs1 - allsum), 2)));
 	    tVprocent.setText(Float.toString(round(procent,2)) + " %");
 	    
 	}
 	    @Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-	    	menu.add(0, MENU_RESET_ID, 0, "Reset");
-	    	menu.add(0, MENU_QUIT_ID, 0, "Quit");
+	public boolean onCreateOptionsMenu(Menu menu) 
+	    {
+	    	menu.add(0, MENU_RESET_ID, 0, "Сброс");
+	    	menu.add(0, MENU_QUIT_ID, 0, "Выход");
 	    	return super.onCreateOptionsMenu(menu);
-	}
+	    }
 
 	    @Override
-	    public boolean onOptionsItemSelected(MenuItem item) {
+	    public boolean onOptionsItemSelected(MenuItem item) 
+	    {
 	    // TODO Auto-generated method stub
-	    switch (item.getItemId()) {
-	    case MENU_RESET_ID:
-	    // очищаем поля
-	    	
-	    	tvsum2.setText("");
-		    profit.setText("");
-		    //tvres1.setText("");
-		    tVprocent.setText("");
-	    	etk2.setText("");
-			etk1.setText("");
-			etsum1.setText("");
-	    	
-	    break;
-	    case MENU_QUIT_ID:
-	    // выход из приложения
-	    finish();
-	    break;
-	    }
+	    switch (item.getItemId()) 
+		    {
+		    case MENU_RESET_ID:
+		    // очищаем поля
+		    	tvsum2.setText("");
+			    profit.setText("");
+			    tVprocent.setText("");
+		    	etk2.setText("");
+				etk1.setText("");
+				etsum1.setText("");
+		    break;
+		    case MENU_QUIT_ID:
+		    // выход из приложения
+		    finish();
+		    break;
+		    }
 	    return super.onOptionsItemSelected(item);
 	    }    
 	    
