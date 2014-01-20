@@ -34,9 +34,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:hint="@string/profit"
-                android:textStyle="italic" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold|italic" />
 
         </TableRow>
 
@@ -59,8 +59,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:hint="@string/profit"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:hint="@string/profit" />
+                android:textStyle="bold|italic" />
 
         </TableRow>
 
@@ -100,9 +101,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
                 android:ems="10"
-                android:inputType="numberDecimal"
+                android:gravity="center"
                 android:hint="@string/txtK1"
-                android:gravity="center" />
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/tsize14" />
 
             <EditText
                 android:id="@+id/etsum1"
@@ -110,9 +112,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="numberDecimal"
+                android:gravity="center"
                 android:hint="@string/Stavka1"
-                android:gravity="center" />
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/tsize14" />
 
         </TableRow>
 
@@ -127,9 +130,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
                 android:ems="10"
-                android:inputType="numberDecimal"
                 android:gravity="center"
-                android:hint="@string/txtK2">
+                android:hint="@string/txtK2"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/tsize14" >
 
                 <requestFocus />
             </EditText>
