@@ -31,14 +31,16 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090000;
-        public static final int action_settings=0x7f090011;
-        public static final int btcount=0x7f090010;
+        public static final int action_settings=0x7f090013;
+        public static final int btcount=0x7f090012;
+        public static final int btnCl=0x7f090011;
         public static final int etk1=0x7f09000b;
         public static final int etk2=0x7f09000e;
         public static final int etsum1=0x7f09000c;
         public static final int tableRow1=0x7f090007;
         public static final int tableRow2=0x7f09000a;
         public static final int tableRow3=0x7f09000d;
+        public static final int tableRow4=0x7f090010;
         public static final int tableRow5=0x7f090001;
         public static final int tableRow6=0x7f090004;
         public static final int textView3=0x7f090008;
@@ -56,6 +58,7 @@ public final class R {
         public static final int main=0x7f080000;
     }
     public static final class string {
+        public static final int Clear=0x7f050010;
         public static final int Procent=0x7f050009;
         public static final int Stavka1=0x7f050005;
         public static final int Stavka2=0x7f050004;

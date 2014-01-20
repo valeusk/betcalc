@@ -149,13 +149,27 @@
 
         </TableRow>
 
-    </TableLayout>
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/chet"
-        android:id="@+id/btcount"
-        android:layout_gravity="center_horizontal" />
+            <Button
+                android:id="@+id/btnCl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="@string/Clear" />
+
+            <Button
+                android:id="@+id/btcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/chet" />
+
+        </TableRow>
+
+    </TableLayout>
 
 </LinearLayout>

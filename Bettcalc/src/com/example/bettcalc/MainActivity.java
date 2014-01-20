@@ -25,6 +25,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	TextView profit;
 	TextView tVprocent;
 	Button count;
+	Button clr;
+	
 	
 	String oper = "";
 	
@@ -51,13 +53,14 @@ public class MainActivity extends Activity implements OnClickListener {
 				profit = (TextView) findViewById(R.id.tvProfit);
 				tVprocent = (TextView) findViewById(R.id.tvProc);
 				count = (Button) findViewById(R.id.btcount);
-				
+				clr = (Button) findViewById(R.id.btnCl);
 				// прописываем обработчик
 				count.setOnClickListener(this);
 			}
 
 	@Override
-	  public void onClick(View v) {
+	  public void onClick(View v) 
+	{
 	    // TODO Auto-generated method stub
 	    float vk1 = 0;//коэффициент 1
 	    float vk2 = 0;//коэффициент 2
@@ -78,14 +81,20 @@ public class MainActivity extends Activity implements OnClickListener {
 	    
 	    switch (v.getId()) {
 	    case R.id.btcount:
-	      oper = "=";
+	      //oper = "=";
 	      sum2 = (vk1 * vs1)/vk2;
 	      break;
-	    /*case R.id.btnSub:
-	      oper = "-";
-	      sum2 = num1 - num2;
+	    case R.id.btnCl:
+	      //oper = "-";
+	    	tvsum2.setText("");
+		    profit.setText("");
+		    tVprocent.setText("");
+	    	etk2.setText("");
+			etk1.setText("");
+			etsum1.setText("");
+	      
 	      break;
-	    case R.id.btnMult:
+	    /*case R.id.btnMult:
 	      oper = "*";
 	      result = num1 * num2;
 	      break;
