@@ -132,7 +132,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	    	
 	    	tvsum2.setText("");
 		    profit.setText("");
-		    tvres1.setText("");
+		    //tvres1.setText("");
 		    tVprocent.setText("");
 	    	etk2.setText("");
 			etk1.setText("");
