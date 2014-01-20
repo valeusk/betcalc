@@ -12,10 +12,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends Activity implements OnClickListener {
-	//поля
+	
 	final int MENU_RESET_ID = 1;
 	final int MENU_QUIT_ID = 2;
-	
+	//поля
 	EditText etk2;
 	EditText etk1;
 	EditText etsum1;
@@ -108,7 +108,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	    else
 	    	{
 	    	tVprocent.setTextColor(getResources().getColor(R.color.Green));
-	    	profit.setTextColor(getResources().getColor(R.color.Good));
+	    	profit.setTextColor(getResources().getColor(R.color.Green));
 	    	}
 	    tvsum2.setText("СТ2 = " + Float.toString(round(sum2, 2)));
 	    profit.setText(Float.toString(round((vk1*vs1 - allsum), 2)));//профит
