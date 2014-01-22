@@ -25,6 +25,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	TextView profit;
 	TextView tVprocent;
 	Button count;
+	Button clr;
+	
 	
 	String oper = "";
 	
@@ -51,13 +53,15 @@ public class MainActivity extends Activity implements OnClickListener {
 				profit = (TextView) findViewById(R.id.tvProfit);
 				tVprocent = (TextView) findViewById(R.id.tvProc);
 				count = (Button) findViewById(R.id.btcount);
-				
+				clr = (Button) findViewById(R.id.btnCl);
 				// прописываем обработчик
 				count.setOnClickListener(this);
+				clr.setOnClickListener(this);
 			}
 
 	@Override
-	  public void onClick(View v) {
+	  public void onClick(View v) 
+	{
 	    // TODO Auto-generated method stub
 	    float vk1 = 0;//коэффициент 1
 	    float vk2 = 0;//коэффициент 2
@@ -78,41 +82,39 @@ public class MainActivity extends Activity implements OnClickListener {
 	    
 	    switch (v.getId()) {
 	    case R.id.btcount:
-	      oper = "=";
+	      
 	      sum2 = (vk1 * vs1)/vk2;
+	      allsum = sum2 + vs1 ;
+		    procent = ((vk1*vs1- allsum)/allsum)*100;
+		    if (procent < 0)
+		    	{
+		    	tVprocent.setTextColor(getResources().getColor(R.color.Attention));
+		    	profit.setTextColor(getResources().getColor(R.color.Attention));
+		    	}
+		    else
+		    	{
+		    	tVprocent.setTextColor(getResources().getColor(R.color.Green));
+		    	profit.setTextColor(getResources().getColor(R.color.Green));
+		    	}
+		    tvsum2.setText("СТ2 = " + Float.toString(round(sum2, 2)));
+		    profit.setText(Float.toString(round((vk1*vs1 - allsum), 2)));
+		    tVprocent.setText(Float.toString(round(procent,2)) + " %");
 	      break;
-	    /*case R.id.btnSub:
-	      oper = "-";
-	      sum2 = num1 - num2;
+	    case R.id.btnCl:
+	    	tVprocent.setText("");
+	    	tvsum2.setText("");
+		    profit.setText("");
+		    etk2.setText("");
+			etk1.setText("");
+			etsum1.setText("");
 	      break;
-	    case R.id.btnMult:
-	      oper = "*";
-	      result = num1 * num2;
-	      break;
-	    case R.id.btnDiv:
-	      oper = "/";
-	      result = num1 / num2;
-	      break;*/
+	   
 	    default:
 	      break;
 	    }
 	    //доделать логику
 	    
-	    allsum = sum2 + vs1 ;
-	    procent = ((vk1*vs1- allsum)/allsum)*100;
-	    if (procent < 0)
-	    	{
-	    	tVprocent.setTextColor(getResources().getColor(R.color.Attention));
-	    	profit.setTextColor(getResources().getColor(R.color.Attention));
-	    	}
-	    else
-	    	{
-	    	tVprocent.setTextColor(getResources().getColor(R.color.Green));
-	    	profit.setTextColor(getResources().getColor(R.color.Green));
-	    	}
-	    tvsum2.setText("СТ2 = " + Float.toString(round(sum2, 2)));
-	    profit.setText(Float.toString(round((vk1*vs1 - allsum), 2)));
-	    tVprocent.setText(Float.toString(round(procent,2)) + " %");
+	    
 	    
 	}
 	    @Override
