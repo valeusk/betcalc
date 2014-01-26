@@ -21,6 +21,12 @@
     <string name="txK1">К1</string>
     <string name="txK2">К2</string>
     <string name="Clear">Стереть</string>
+    <string name="txtK3">КФ3</string>
+    <string name="Stavka3">Ставка №3</string>
+    <string name="WinProc1">1. Исход  %</string>
+    <string name="profStake">Прибыль исхода</string>
+    <string name="WinProc2">2. Исход %</string>
+    <string name="WinProc3">3. Исход %</string>
 
 </resources>
 

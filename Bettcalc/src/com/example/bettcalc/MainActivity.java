@@ -1,6 +1,7 @@
 package com.example.bettcalc;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -26,7 +27,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	TextView tVprocent;
 	Button count;
 	Button clr;
-	
+	Button bu1;
 	
 	String oper = "";
 	
@@ -47,7 +48,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				etk2 = (EditText) findViewById(R.id.etk2);
 		        etk1 = (EditText) findViewById(R.id.etk1);
 				etsum1 = (EditText) findViewById(R.id.etsum1);
-				
+				bu1 = (Button) findViewById(R.id.button1);
 				//tvres1 = (TextView) findViewById(R.id.res1);
 				tvsum2 = (TextView) findViewById(R.id.tvsum2);
 				profit = (TextView) findViewById(R.id.tvProfit);
@@ -57,6 +58,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				// прописываем обработчик
 				count.setOnClickListener(this);
 				clr.setOnClickListener(this);
+				bu1.setOnClickListener(this);
 			}
 
 	@Override
@@ -109,6 +111,17 @@ public class MainActivity extends Activity implements OnClickListener {
 			etsum1.setText("");
 	      break;
 	   
+	    case R.id.button1:
+	    	Intent intent = new Intent(this, three_outcomes.class);
+	        startActivity(intent);
+	    	/*tVprocent.setText("");
+	    	tvsum2.setText("");
+		    profit.setText("");
+		    etk2.setText("");
+			etk1.setText("");
+			etsum1.setText("");*/
+	      break;  
+	      
 	    default:
 	      break;
 	    }
@@ -132,13 +145,15 @@ public class MainActivity extends Activity implements OnClickListener {
 	    switch (item.getItemId()) 
 		    {
 		    case MENU_RESET_ID:
-		    // очищаем поля
+		   // очищаем поля
 		    	tvsum2.setText("");
 			    profit.setText("");
 			    tVprocent.setText("");
 		    	etk2.setText("");
 				etk1.setText("");
 				etsum1.setText("");
+		    	/*Intent intent = new Intent(this, three_outcomes.class);
+		        startActivity(intent);*/
 		    break;
 		    case MENU_QUIT_ID:
 		    // выход из приложения
