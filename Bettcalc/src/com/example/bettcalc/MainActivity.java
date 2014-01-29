@@ -119,7 +119,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	    @Override
 	public boolean onCreateOptionsMenu(Menu menu) 
 	    {
-	    	menu.add(0, MENU_RESET_ID, 0, "Сброс");
+	    	menu.add(0, MENU_RESET_ID, 0, "3 исхода");
 	    	menu.add(0, MENU_QUIT_ID, 0, "Выход");
 	    	return super.onCreateOptionsMenu(menu);
 	    }
