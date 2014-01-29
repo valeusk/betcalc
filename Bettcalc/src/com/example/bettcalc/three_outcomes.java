@@ -197,10 +197,7 @@ public class three_outcomes extends Activity implements OnClickListener {
 	    default:
 	      break;
 	    }
-	    //доделать логику
-	    
-	    
-	    
+	 
 	}
 	    @Override
 	public boolean onCreateOptionsMenu(Menu menu) 
@@ -217,7 +214,7 @@ public class three_outcomes extends Activity implements OnClickListener {
 	    switch (item.getItemId()) 
 		    {
 		    case MENU_RESET_ID:
-		    	etk1.setText("");
+		    	/*etk1.setText("");
 		    	etk2.setText("");
 		    	etk3.setText("");
 		    	etsum1.setText("");
@@ -229,9 +226,9 @@ public class three_outcomes extends Activity implements OnClickListener {
 		    	procent3.setText("");
 		    	profit1.setText("");
 		    	profit2.setText("");
-		    	profit3.setText("");
-		    /*Intent intent = new Intent(this, three_outcomes.class);
-		    startActivity(intent);*/
+		    	profit3.setText("");*/
+		    	Intent intent = new Intent(this, MainActivity.class);
+			    startActivity(intent);
 		    break;
 		    case MENU_QUIT_ID:
 		    // выход из приложения
