@@ -27,6 +27,11 @@
     <string name="profStake">Прибыль исхода</string>
     <string name="WinProc2">2. Исход %</string>
     <string name="WinProc3">3. Исход %</string>
+    <string name="win1">1. Выигрышь:</string>
+    <string name="txtWinProc">2. Исход %</string>
+    <string name="txtWin2">2. Выигрышь:</string>
+    <string name="txtWinProc3">3. Исход %</string>
+    <string name="txtWin3">3. Выигрышь:</string>
 
 </resources>
 

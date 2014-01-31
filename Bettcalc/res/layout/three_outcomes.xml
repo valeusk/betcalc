@@ -1,7 +1,7 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/TableLayout1"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -10,27 +10,30 @@
     tools:context=".MainActivity" >
 
     <TableRow
-        android:id="@+id/tableRow1"
+        android:id="@+id/tableRow5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="6"
             android:gravity="center"
-            android:text="@string/txtKf"
+            android:text="@string/WinProc1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:textStyle="bold|italic" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/txtStavka"
+            android:text="@string/win1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:textStyle="bold|italic" />
+
     </TableRow>
 
     <TableRow
@@ -43,8 +46,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="6"
-            android:gravity="right"
-            android:hint="@string/WinProc1"
+            android:gravity="center"
+            android:hint="@string/profit"
             android:textSize="@dimen/tsize14"
             android:textStyle="italic" />
 
@@ -53,8 +56,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="right"
-            android:hint="@string/profStake"
+            android:gravity="center"
+            android:hint="@string/profit"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textStyle="italic" />
 
@@ -89,6 +92,33 @@
     </TableRow>
 
     <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:text="@string/txtWinProc"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/txtWin2"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic" />
+
+    </TableRow>
+
+    <TableRow
         android:id="@+id/tableRow9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
@@ -98,8 +128,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="6"
-            android:gravity="right"
-            android:hint="@string/WinProc2"
+            android:gravity="center"
+            android:hint="@string/profit"
             android:textSize="@dimen/tsize14"
             android:textStyle="italic" />
 
@@ -108,8 +138,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="right"
-            android:hint="@string/profStake"
+            android:gravity="center"
+            android:hint="@string/profit"
             android:textStyle="italic" />
 
     </TableRow>
@@ -141,6 +171,33 @@
     </TableRow>
 
     <TableRow
+        android:id="@+id/tableRow11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:text="@string/txtWinProc3"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/txtWin3"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold|italic" />
+
+    </TableRow>
+
+    <TableRow
         android:id="@+id/tableRow10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
@@ -150,8 +207,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="6"
-            android:gravity="right"
-            android:hint="@string/WinProc3"
+            android:gravity="center"
+            android:hint="@string/profit"
             android:textSize="@dimen/tsize14"
             android:textStyle="italic" />
 
@@ -160,8 +217,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="right"
-            android:hint="@string/profStake"
+            android:gravity="center"
+            android:hint="@string/profit"
             android:textStyle="italic" />
 
     </TableRow>
@@ -202,7 +259,7 @@
             android:id="@+id/btnCl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="18"
+            android:layout_weight="6"
             android:text="@string/Clear" />
 
         <Button
