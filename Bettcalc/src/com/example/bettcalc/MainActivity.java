@@ -71,15 +71,20 @@ public class MainActivity extends Activity implements OnClickListener {
 	    float allsum = 0;
 	    
 	    // Проверяем поля на пустоту
-	    if (TextUtils.isEmpty(etk2.getText().toString())
-	        || TextUtils.isEmpty(etk1.getText().toString())||TextUtils.isEmpty(etsum1.getText().toString())) {
-	      return;}
-	 // читаем EditText и заполняем переменные числами
+	    if (TextUtils.isEmpty(etk2.getText().toString())||
+	    	TextUtils.isEmpty(etk1.getText().toString())||
+	    	TextUtils.isEmpty(etsum1.getText().toString())) 
+			    {
+			      return;
+			    }
+			 
+	    // читаем EditText и заполняем переменные числами
 	    vk2 = Float.parseFloat(etk2.getText().toString());
 	    vk1 = Float.parseFloat(etk1.getText().toString());
 	    vs1 = Float.parseFloat(etsum1.getText().toString());
 	    
-	    switch (v.getId()) {
+	    switch (v.getId()) 
+	    {
 	    case R.id.btcount:
 	      
 	      sum2 = (vk1 * vs1)/vk2;

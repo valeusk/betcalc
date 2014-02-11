@@ -32,6 +32,10 @@
     <string name="txtWin2">2. Выигрышь:</string>
     <string name="txtWinProc3">3. Исход %</string>
     <string name="txtWin3">3. Выигрышь:</string>
+    <string name="chbPereves1">1го</string>
+    <string name="chbPereves2">2го</string>
+    <string name="txtPereves">Перевес</string>
+    <string name="txtProfitN">Прибыль исхода</string>
 
 </resources>
 
