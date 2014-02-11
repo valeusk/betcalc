@@ -36,6 +36,7 @@
     <string name="chbPereves2">2го</string>
     <string name="txtPereves">Перевес</string>
     <string name="txtProfitN">Прибыль исхода</string>
+    <string name="txtOperSumm">Сумма операции:</string>
 
 </resources>
 
